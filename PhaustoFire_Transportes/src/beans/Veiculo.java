@@ -1,4 +1,5 @@
 package beans;
+
 //tenho que ver como funciona importação de enum
 public class Veiculo {
     private String marca;
@@ -9,11 +10,11 @@ public class Veiculo {
         VAN, CAM2EIXOS, CAM4EIXOS
     }
     
-    public Veiculo(String marca, String modelo, int pesoMax, enum TIPO){
+    public Veiculo(String marca, String modelo, int pesoMax, TIPO a){
         this.setMarca(marca);
         this.setModelo(modelo);
         this.setPesoMax(pesoMax);
-        this.setTipo(TIPO);
+        this.setTipo(a);
     }
     
     public Veiculo(){
@@ -28,7 +29,7 @@ public class Veiculo {
     private void setPesoMax(int pesoMax){
         this.pesoMax = pesoMax;
     }
-    private void setTipo (enum TIPO){
+    private void setTipo (TIPO a){
         this.TIPO = TIPO;
     }
     
