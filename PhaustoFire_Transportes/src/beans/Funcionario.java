@@ -5,10 +5,10 @@ public class Funcionario extends Pessoa{
     private String cargo;
 
     public Funcionario(String nome, String endereco, String complemento, String cep, 
-    String estado, String cidade, String cpf, String cargo){
-        super(nome, endereco, complemento, cep, estado, cidade, cpf, cargo);
+    String estado, String cidade, int codigoPessoa, String cpf, String cargo){
+        super(nome, endereco, complemento, cep, estado, cidade, codigoPessoa, cpf, cargo);
         this.setCpf(cpf);
-        this.setCargo(cargo);
+		this.setCargo(cargo);
     }
 	public String getCpf() {
 		return cpf;

@@ -5,16 +5,18 @@ public class Veiculo {
     private String marca;
     private String modelo;
     private int pesoMax;
-    
+    private int codigoVeiculo;
+        
     private enum TIPO {
         VAN, CAM2EIXOS, CAM4EIXOS
     }
     
-    public Veiculo(String marca, String modelo, int pesoMax, TIPO a){
+    public Veiculo(String marca, String modelo, int pesoMax, TIPO a, int codigoVeiculo){
         this.setMarca(marca);
         this.setModelo(modelo);
         this.setPesoMax(pesoMax);
         this.setTipo(a);
+        this.setCodigoveiculo(codigoVeiculo);
     }
     
     public Veiculo(){
@@ -45,4 +47,14 @@ public class Veiculo {
     private TIPO getTipo(){
         this.TIPO = TIPO;
     }  
+    public int getCodigoveiculo()
+	{
+		return this.codigoVeiculo;
+	}
+
+	public void setCodigoveiculo(int codigoVeiculo)
+	{
+		this.codigoVeiculo = codigoVeiculo;
+	}
+
 }

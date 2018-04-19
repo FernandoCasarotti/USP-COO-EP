@@ -4,8 +4,8 @@ public class Motorista extends Funcionario{
     private boolean tipoCarta[] = new boolean[3];
 
     public Motorista(String nome, String endereco, String complemento, String cep, 
-    String estado, String cidade, String cpf, String cargo, boolean tipoCarta[]){
-        super(nome, endereco, complemento, cep, estado, cidade, cpf, cargo);
+    String estado, String cidade, String cpf, String cargo, int codigoPessoa, boolean tipoCarta[]){
+        super(nome, endereco, complemento, cep, estado, cidade, codigoPessoa, cpf, cargo);
         this.setTipocarta(tipoCarta);
     }
 

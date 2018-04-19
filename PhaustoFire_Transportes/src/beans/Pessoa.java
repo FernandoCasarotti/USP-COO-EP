@@ -6,16 +6,18 @@ public class Pessoa{
     private String complemento;
     private String cep;
     private String estado;
-    private String cidade;
+	private String cidade;
+	private int codigoPessoa;
     
     public Pessoa(String nome, String endereco, String complemento, String cep, 
-        String estado, String cidade){
+        String estado, String cidade, int codigoPessoa){
             this.setNome(nome);
             this.setEndereco(endereco);
             this.setComplemento(complemento);
             this.setCep(cep);
             this.setEstado(estado);
-            this.setCidade(cidade);
+			this.setCidade(cidade);
+			this.setCodigopessoa(codigoPessoa);
     }
     
     public String getNome() {
@@ -53,5 +55,15 @@ public class Pessoa{
 	}
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
+	}
+	
+	public int getCodigopessoa()
+	{
+		return this.codigoPessoa;
+	}
+
+	public void setCodigopessoa(int codigoPessoa)
+	{
+		this.codigoPessoa = codigoPessoa;
 	}
 }
