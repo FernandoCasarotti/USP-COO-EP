@@ -42,7 +42,7 @@ public class TelaLogin extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaLogin() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Anderson\\eclipse-workspace\\prjCOO\\Imagens\\logo.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("~\\prjCOO\\Imagens\\logo.jpg"));
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 350);
@@ -79,7 +79,7 @@ public class TelaLogin extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					//ações do botão login aqui**********************************************************
-					new Pedido().setVisible(true);
+					new EditarPessoa().setVisible(true);
 					dispose();
 				}catch(Exception erro) {
 					

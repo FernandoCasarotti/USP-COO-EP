@@ -10,10 +10,18 @@ import javax.swing.JLabel;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.text.ParseException;
+import java.awt.event.ActionEvent;
 
 public class MenuPrincipal extends JFrame {
 
 	private JPanel contentPane;
+	JLabel lblNewLabel;
+	JButton btnGerenciarEntrega;
+	JButton btnListaEntregas;
+	JButton btnGerenciarPessoas;
+	JButton btnCadastrarPessoas;
 
 	/**
 	 * Launch the application.
@@ -36,7 +44,7 @@ public class MenuPrincipal extends JFrame {
 	 */
 	public MenuPrincipal() {
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Anderson\\eclipse-workspace\\prjCOO\\Imagens\\logo.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("~\\prjCOO\\Imagens\\logo.jpg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 860, 650);
 		contentPane = new JPanel();
@@ -44,25 +52,64 @@ public class MenuPrincipal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Anderson\\eclipse-workspace\\prjCOO\\Imagens\\faixa.jpg"));
+		lblNewLabel = new JLabel("");
+		btnGerenciarEntrega = new JButton("Gerenciar Entregas");
+		btnListaEntregas = new JButton("Lista de Entregas");
+		btnGerenciarPessoas = new JButton("Gerenciar Pessoas");
+		btnCadastrarPessoas = new JButton("Cadastrar Pessoas");
+		
 		lblNewLabel.setBounds(0, 32, 854, 170);
-		contentPane.add(lblNewLabel);
-		
-		JButton btnCadastrarEntrega = new JButton("Cadastrar Entrega");
-		btnCadastrarEntrega.setBounds(21, 365, 150, 60);
-		contentPane.add(btnCadastrarEntrega);
-		
-		JButton btnListaEntregas = new JButton("Listar Entregas");
+		btnGerenciarEntrega.setBounds(21, 365, 150, 60);
 		btnListaEntregas.setBounds(216, 365, 150, 60);
+		btnGerenciarPessoas.setBounds(411, 365, 150, 60);
+		btnCadastrarPessoas.setBounds(601, 365, 150, 60);
+		
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Anderson\\eclipse-workspace\\prjCOO\\Imagens\\faixa.jpg"));
+		
+		contentPane.add(lblNewLabel);
+		contentPane.add(btnGerenciarEntrega);
 		contentPane.add(btnListaEntregas);
+		contentPane.add(btnGerenciarPessoas);	
+		contentPane.add(btnCadastrarPessoas);
 		
-		JButton btnGerenciarFuncionario = new JButton("Gerenciar Funcionario");
-		btnGerenciarFuncionario.setBounds(411, 365, 150, 60);
-		contentPane.add(btnGerenciarFuncionario);
 		
-		JButton btnGerenciarCliente = new JButton("Gerenciar Cliente");
-		btnGerenciarCliente.setBounds(601, 365, 150, 60);
-		contentPane.add(btnGerenciarCliente);
+		btnGerenciarEntrega.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
+		
+		btnListaEntregas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
+		
+		btnGerenciarPessoas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					new EditarPessoa().setVisible(true);
+				} catch (ParseException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				dispose();
+			}
+		});
+		
+		
+		btnCadastrarPessoas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					new CadastrarPessoa().setVisible(true);
+				} catch (ParseException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				dispose();
+			}
+		});
 	}
 }
